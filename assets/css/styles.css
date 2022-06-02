@@ -47,6 +47,7 @@ input#burger-menu ~ ul{
     position: absolute;
     width: 100%;
     left: 0;
+    z-index: 2;
     height: calc( 100vh - 60px );
     top: 60px;
     display: none;
