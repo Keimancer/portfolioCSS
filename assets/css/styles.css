@@ -102,6 +102,24 @@ header img.foto{
     top: 30px;
 }
 
+header > .header-icons{
+    display: flex;
+    gap: 10vw;
+    position: relative;
+    justify-content: space-evenly;
+    padding: 0 30vw;
+}
+
+.header-icons img{
+    position: relative;
+    border: 1px solid var(--white);
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--light-purple);
+    border-radius: 30px;
+}
+
+
 div.about-me{
     grid-area: about-me;
 }
