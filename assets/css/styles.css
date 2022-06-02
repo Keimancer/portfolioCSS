@@ -13,6 +13,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    color: var(--almost-black);
+}
+
+body{
+    background-color: var(--light-pink);
 }
 
 nav{
@@ -47,7 +52,7 @@ input#burger-menu ~ ul{
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 3.5vw;
     padding: 2rem 1rem;
 }
 
@@ -55,13 +60,69 @@ input#burger-menu ~ ul{
     border-bottom: 2px solid transparent;
 }*/
 
-input#burger-menu ~ ul > li:hover{
-    cursor: pointer;
-    border-bottom: 2px solid var(--dark-purple);
-}
-
 input#burger-menu:checked ~ ul{
     display: flex;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header > .header-description{
+    position: relative;
+    align-items: flex-end;
+    padding-left: 5vw;
+}
+
+.header-description > h1{
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    font-stretch: condensed;
+}
+
+.header-description > h2{
+    position: relative;
+    top: 5vh;
+    font-size: 20px;
+    font-weight: 400;
+    font-stretch: condensed;
+}
+
+header > .header-cont{
+    position: relative;
+}
+
+header img.foto{
+    position: relative;
+    width: 70vw;
+    left: 15vw;
+    top: 30px;
+}
+
+div.about-me{
+    grid-area: about-me;
+}
+
+div.abilities{
+    grid-area: abilities;
+}
+
+div.experience{
+    grid-area: experience;
+}
+
+div.portfolio{
+    grid-area: portfolio;
+}
+
+div.contact{
+    grid-area: contact;
+}
+
+footer{
+    grid-area: footer;
 }
 
 @media screen and ( min-width:768px ) {
@@ -76,5 +137,10 @@ input#burger-menu:checked ~ ul{
         flex-direction: row;
         height: auto;
         justify-content: flex-end; 
+    }
+
+    input#burger-menu ~ ul > li:hover{
+        cursor: pointer;
+        border-bottom: 2px solid var(--dark-purple);
     }
 }
