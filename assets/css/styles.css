@@ -1,0 +1,80 @@
+:root{
+    --light-purple:#8E7BEF;
+    --dark-purple: #5D3BEF;
+    --light-gray:#F9F6FF;
+    --almost-black:#222222;
+    --brownie:#423F40;
+    --white:#FFFFFF;
+    --light-pink:#F9F5F2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    height: 60px;
+}
+
+input#burger-menu{
+    visibility: hidden;
+}
+
+img#burger-size{
+    height: 50px;
+    width: 50px;
+}
+
+input#burger-menu ~ ul{
+    background-color: var(--light-pink);
+    color: var(--almost-black);
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: condensed;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: calc( 100vh - 60px );
+    top: 60px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 1rem;
+}
+
+/*input#burger-menu ~ ul > li{
+    border-bottom: 2px solid transparent;
+}*/
+
+input#burger-menu ~ ul > li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid var(--dark-purple);
+}
+
+input#burger-menu:checked ~ ul{
+    display: flex;
+}
+
+@media screen and ( min-width:768px ) {
+    label{
+        display: none;
+    }
+
+    input#burger-menu ~ ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end; 
+    }
+}
