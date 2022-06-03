@@ -126,13 +126,18 @@ header > .header-icons{
     padding: 5vh 30vw;
 }
 
-.header-icons img{
+.header-icons a{
+    display: flex;
     position: relative;
     border: 1px solid var(--white);
+    min-width: 50px;
+    min-height: 50px;
     padding: 10px;
     color: var(--white);
     background-color: var(--light-purple);
     border-radius: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 header > .header-contacts-father{
@@ -266,6 +271,7 @@ footer{
     .header-description > h2{
         font-size: 25px;
         font-weight: 400;
+        padding-top: 5vh;
     }
 
     header > .header-icons{
@@ -277,13 +283,22 @@ footer{
         padding: 5vh 0 0 0;
     }
 
-    .header-icons img{
+    .header-icons a{
+        display: flex;
         position: relative;
         border: 1px solid var(--white);
-        padding: 20px;
+        width: 65px;
+        height: 65px;
+        padding: 10px;
         color: var(--white);
         background-color: var(--light-purple);
         border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-icons img{
+        width: 35px;
     }
 
     header > .header-cont{
@@ -307,13 +322,12 @@ footer{
 
     header > .header-contacts-father{
         grid-area: header-contacts-father;
-        width: 90%;
+        display: flex;
+        width: 60%;
     }
 
     a.contact-link{
         display: flex;
-        justify-content: baseline;
-        align-items: flex-end;
         width: 100%;
     }
 
@@ -321,8 +335,6 @@ footer{
         position: relative;
         display: flex;
         background-color: var(--dark-purple);
-        justify-content: center;
-        align-self: center;
         top: 0;
         padding: 10px 0;
         width: 100%;
