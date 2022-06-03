@@ -228,6 +228,10 @@ div#abilities{
     gap: 5vh;
 }
 
+#abilities > div.abilities-charts{
+    
+}
+
 div.experience{
     grid-area: experience;
 }
