@@ -76,8 +76,17 @@ a:link{
     text-decoration: none;
 }
 
+nav a{
+    border-bottom: 1px solid var(--dark-purple);
+}
+
+input#burger-menu ~ ul li#home{
+    font-weight: 600;
+    color: var(--dark-purple);
+}
+
 header{
-    padding-top: 60px;
+    padding-top: calc(5vh + 60px);
     display: flex;
     flex-direction: column;
 }
@@ -196,7 +205,7 @@ p{
     font-weight: 400;
     font-stretch: ultra-condensed;
     text-align: center;
-    line-height: 5vh;
+    line-height: 30px;
 }
 
 div#about-me{
@@ -257,9 +266,8 @@ footer{
         border-bottom: 2px solid var(--dark-purple);
     }
 
-    input#burger-menu ~ ul li#home{
-        font-weight: 600;
-        color: var(--dark-purple);
+    nav a{
+        border-bottom: 0;
     }
 
     header{
