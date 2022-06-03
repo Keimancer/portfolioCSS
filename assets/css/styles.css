@@ -97,11 +97,18 @@ header > .header-description{
     padding-right: 5vw;
     font-size: 20px;
     font-weight: 400;
+    z-index: 2;
     font-stretch: ultra-condensed;
 }
 
 header > .header-cont{
     position: relative;
+}
+
+header img.forma{
+    position: absolute;
+    width: 80vw;
+    padding-left: 10vw;
 }
 
 header img.foto{
