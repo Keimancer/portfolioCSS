@@ -135,6 +135,12 @@ header > .header-icons{
     border-radius: 30px;
 }
 
+header > .header-contacts-father{
+    position: relative;
+    display: flex;
+    align-self: center;
+}
+
 a.contact-link{
     position: relative;
     display: flex;
@@ -150,10 +156,10 @@ a.contact-link{
     align-self: center;
     top: 0;
     padding: 5px 22vw;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.header-contacts > h3{
+.header-contacts h3{
     position: relative;
     color: var(--white);
     align-self: center;
@@ -189,7 +195,7 @@ div#about-me{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 10vh 5vw;
+    padding: 15vh 5vw;
     gap: 5vh;
 }
 
@@ -230,5 +236,96 @@ footer{
     input#burger-menu ~ ul > a:hover{
         cursor: pointer;
         border-bottom: 2px solid var(--dark-purple);
+    }
+
+    header{
+        padding-top: 5vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "header-cont header-description"
+        "header-cont header-icons"
+        "header-cont header-contacts-father";
+    }
+
+    header > .header-description{
+        grid-area: header-description;
+        position: relative;
+        align-items: flex-end;
+        padding-left: 0;
+    }
+
+    .header-description > h1{
+        position: relative;
+        font-size: 100px;
+        padding-right: 5vw;
+        line-height: 16vh;
+        padding-top: 10vh;
+    }
+    
+    .header-description > h2{
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    header > .header-icons{
+        grid-area: header-icons;
+        display: flex;
+        gap: 5vw;
+        position: relative;
+        justify-content: left;
+        padding: 5vh 0 0 0;
+    }
+
+    .header-icons img{
+        position: relative;
+        border: 1px solid var(--white);
+        padding: 20px;
+        color: var(--white);
+        background-color: var(--light-purple);
+        border-radius: 50px;
+    }
+
+    header > .header-cont{
+        grid-area: header-cont;
+    }
+
+    header img.forma{
+        position: absolute;
+        width: 40vw;
+        padding-left: 5vw;
+    }
+    
+    header img.foto{
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 10vh 0 0 10vw;
+        justify-self: right;
+    }
+
+    header > .header-contacts-father{
+        grid-area: header-contacts-father;
+        width: 90%;
+    }
+
+    a.contact-link{
+        display: flex;
+        justify-content: baseline;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .header-contacts{
+        position: relative;
+        display: flex;
+        background-color: var(--dark-purple);
+        justify-content: center;
+        align-self: center;
+        top: 0;
+        padding: 10px 0;
+        width: 100%;
+        gap: 2rem;
     }
 }
