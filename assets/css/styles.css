@@ -16,6 +16,10 @@
     color: var(--almost-black);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--light-pink);
     display: flex;
@@ -229,7 +233,18 @@ div#abilities{
 }
 
 #abilities > div.abilities-charts{
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.abilities-charts > div{
+    min-width: 40vw;
+    height: 40vw;
+    background-color: var(--light-gray);
 }
 
 div.experience{
