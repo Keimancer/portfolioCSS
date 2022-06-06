@@ -68,10 +68,6 @@ input#burger-menu ~ ul{
     padding: 2rem 1rem;
 }
 
-/*input#burger-menu ~ ul > li{
-    border-bottom: 2px solid transparent;
-}*/
-
 input#burger-menu:checked ~ ul{
     display: flex;
 }
@@ -236,7 +232,7 @@ div#about-me{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 15vh 5vw;
+    padding: 15vh 5vw 0 5vw;
     gap: 5vh;
 }
 
@@ -246,7 +242,7 @@ div#abilities{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 0 5vw;
+    padding: 15vh 5vw 10vh 5vw;
     gap: 5vh;
 }
 
@@ -336,7 +332,7 @@ div#portfolio{
 
 div#portfolio > div.portfolio-imgs{
     display: grid;
-    padding: 10px 5vw;
+    padding: 10px 0vw;
     grid-template-columns: 45vw 45vw;
     align-items: center;
     gap: 10px;
@@ -400,6 +396,16 @@ footer > h3 {
     font-stretch: ultra-condensed;
 }
 
+@media screen and ( min-width:600px ){
+    .header-description > h1{
+        font-size: 70px;
+    }
+    
+    .header-description > h2{
+        font-size: 25px;
+    }
+}
+
 @media screen and ( min-width:768px ) {
     label{
         display: none;
@@ -445,16 +451,16 @@ footer > h3 {
 
     .header-description > h1{
         position: relative;
-        font-size: 100px;
+        font-size: 70px;
         padding-right: 5vw;
-        line-height: 16vh;
-        padding-top: 10vh;
+        line-height: 12vh;
+        padding-top: 0vh;
     }
     
     .header-description > h2{
         font-size: 25px;
         font-weight: 400;
-        padding-top: 5vh;
+        padding-top: 0vh;
     }
 
     header > .header-icons{
@@ -470,8 +476,8 @@ footer > h3 {
         display: flex;
         position: relative;
         border: 1px solid var(--white);
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
         padding: 10px;
         color: var(--white);
         background-color: var(--light-purple);
@@ -525,18 +531,17 @@ footer > h3 {
     }
 
     h4{
-        padding-top: 10vh;
-        font-size: 50px;
+        padding-top: 0vh;
+        font-size: 40px;
     }
     
     p{
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 400;
         font-stretch: ultra-condensed;
         text-align: center;
         line-height: 6vh;
-        padding-top: 3vh;
-
+        padding-top: 2vh;
     }
 
     h5{
@@ -603,6 +608,43 @@ footer > h3 {
 }
 
 @media screen and ( min-width:992px ) {
+    .header-description > h1{
+        font-size: 100px;
+        padding-top: 10vh;
+        line-height: 20vh;
+    }
+
+    .header-description > h2{
+        padding-top: 3vh;
+    }
+
+    .header-icons a{
+        width: 50px;
+        height: 50px;
+    }
+
+    h4{
+        padding-top: 10vh;
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 25px;
+        padding-top: 3vh;
+    }
+
+    div#about-me{
+        padding: 5vh 5vw 0 5vw;
+    }
+
+    div#abilities{
+        padding: 5vh 5vw 0vh 5vw;
+    }
+
+    div#portfolio{
+        padding: 5vh 5vw 0vh 5vw;
+    }
+
     div#experience > div.exp-grid{
         display: grid;
         gap: 30px;
@@ -616,6 +658,19 @@ footer > h3 {
 }
 
 @media screen and ( min-width:1200px ) {
+    .header-icons a{
+        width: 75px;
+        height: 75px;
+    }
+    
+    .header-icons img{
+        width: 40px;
+    }
+    
+    div#experience > h4{
+        padding-bottom: 5vh;
+    }
+
     div#experience > div.exp-grid{
         display: grid;
         gap: 30px;
@@ -623,6 +678,10 @@ footer > h3 {
         align-items: center;
     }
     
+    div#portfolio{
+        padding: 10vh 5vw 0vh 5vw;
+    }
+
     div#portfolio > div.portfolio-imgs{
         grid-template-columns: repeat( 6, 1fr );
         gap: 20px;
@@ -642,5 +701,16 @@ footer > h3 {
 
     footer > h3 {
         font-size: 28px;
+    }
+}
+
+@media screen and ( min-width:1480px ){
+    .header-description > h1{
+        font-size: 150px;
+        line-height: 150px;
+    }
+
+    .header-description > h2{
+        font-size: 35px;
     }
 }
