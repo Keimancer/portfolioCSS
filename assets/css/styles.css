@@ -212,6 +212,24 @@ p{
     line-height: 30px;
 }
 
+h5{
+    color: var(--almost-black);
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: ultra-condensed;
+    padding-left: 15px;
+}
+
+h6{
+    color: var(--brownie);
+    align-self: center;
+    font-size: 12px;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
+    padding-left: 10px;
+}
+
 div#about-me{
     position: relative;
     display: flex;
@@ -242,25 +260,144 @@ div#abilities{
 }
 
 .abilities-charts > div{
-    min-width: 40vw;
-    height: 40vw;
+    min-width: 200px;
+    max-width: 250px;
+    height: 250px;
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
+
+.abilities-charts > div > div{
+    display: flex;
+    gap: 2vw;
+    padding-bottom: 3vh;
+    padding-left: 10px;
+}
+
+.abilities-charts > div img{
+    object-fit: contain;
+    width: 18px;
     background-color: var(--light-gray);
 }
 
-div.experience{
-    grid-area: experience;
+div#experience{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw;
+    gap: 5vh;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-div.portfolio{
-    grid-area: portfolio;
+div#experience > div.exp-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 80px 110px 70px;
+    align-items: center;
 }
 
-div.contact{
-    grid-area: contact;
+div#experience img{
+    object-fit: contain;
+    width: 80px;
+}
+
+div.experience-grid > div.exp-texts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.exp-grid h5{
+    padding: 0;
+}
+
+div.exp-texts > h5, div.exp-texts > h6{
+    padding: 0;
+    justify-content: space-around;
+}
+
+div.exp-texts > span{
+    color: var(--brownie);
+    font-size: 12px;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
+}
+
+div#portfolio{
+    display: flex;
+    flex-direction: column;
+    padding: 15vh 5vw;
+    gap: 5vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div#portfolio > div.portfolio-imgs{
+    display: grid;
+    padding: 10px 5vw;
+    grid-template-columns: 45vw 45vw;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+div#portfolio > div.portfolio-imgs > img{
+    object-fit: contain;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+img#big1, img#big2 {
+    grid-column: 1/-1;
+}
+
+div#contact{
+    display: flex;
+    flex-direction: column;
+    padding: 0vh 5vw 7vh 5vw;
+    gap: 5vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div#contact > div.contact-big{
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.contact-small{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.contact-small > h5, div.contact-small > h6{
+    padding: 0;
+}
+
+div.contact-small > h5{
+    padding-top: 20px;
 }
 
 footer{
-    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+footer > h3 {
+    color: var(--light-purple);
+    font-size: 20px;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
 }
 
 @media screen and ( min-width:768px ) {
@@ -399,5 +536,111 @@ footer{
         text-align: center;
         line-height: 6vh;
         padding-top: 3vh;
+
+    }
+
+    h5{
+        color: var(--almost-black);
+        align-self: center;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 600;
+        font-stretch: ultra-condensed;
+        padding-left: 15px;
+    }
+    
+    h6{
+        color: var(--brownie);
+        align-self: center;
+        font-size: 14px;
+        font-weight: 400;
+        font-stretch: ultra-condensed;
+        padding-left: 10px;
+    }
+
+    #abilities > div.abilities-charts{
+        justify-content: space-evenly;
+        gap: 10vw;
+        overflow-x: hidden;
+        padding-top: 3vh;
+    }
+
+    div#portfolio > div.portfolio-imgs{
+        grid-template-columns: repeat( 4, 1fr );
+        gap: 15px;
+    }
+
+    img#big1 {
+        grid-column: 1/3;
+    }
+
+    img#big2 {
+        grid-column: 2/4;
+    }
+
+    div#contact{
+        gap: 10vh;
+    }
+    
+    div#contact > div.contact-big{
+        gap: 10vh;
+    }
+
+    div.contact-small > img{
+        object-fit: contain;
+        width: 60px;
+    }
+
+    footer{
+        padding-top: 3vh;
+        padding-bottom: 50px;
+    }
+    
+    footer > h3 {
+        font-size: 24px;
+    }
+    
+}
+
+@media screen and ( min-width:992px ) {
+    div#experience > div.exp-grid{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 80px 110px 70px 80px 110px 70px;
+        align-items: center;
+    }    
+
+    div#contact > div.contact-big{
+        gap: 15vh;
+    }
+}
+
+@media screen and ( min-width:1200px ) {
+    div#experience > div.exp-grid{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 80px 110px 90px 80px 110px 90px 80px 110px 90px;
+        align-items: center;
+    }
+    
+    div#portfolio > div.portfolio-imgs{
+        grid-template-columns: repeat( 6, 1fr );
+        gap: 20px;
+    }
+
+    img#big1 {
+        grid-column: 1/3;
+    }
+
+    img#big2 {
+        grid-column: 5/-1;
+    }
+
+    div.contact-small > img{
+        width: 80px;
+    }
+
+    footer > h3 {
+        font-size: 28px;
     }
 }
