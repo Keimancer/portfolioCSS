@@ -339,13 +339,30 @@ div#portfolio > div.portfolio-imgs{
     justify-content: space-evenly;
 }
 
-div#portfolio > div.portfolio-imgs > img{
+div#portfolio > div.portfolio-imgs > div > a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+div#portfolio > div.portfolio-imgs > div > a:hover{
+    cursor: pointer;
+    border-bottom: 2px solid var(--dark-purple);
+}
+
+div#portfolio > div.portfolio-imgs > div > a > img{
     object-fit: contain;
     min-width: 100%;
     max-width: 100%;
 }
 
-img#big1, img#big2 {
+div#portfolio > div.portfolio-imgs > div > a > h5{
+    padding-left: 0;
+    padding-top: 1rem;
+}
+
+div#big1, div#big2 {
     grid-column: 1/-1;
 }
 
@@ -687,11 +704,11 @@ footer > h3 {
         gap: 20px;
     }
 
-    img#big1 {
+    div#big1 {
         grid-column: 1/4;
     }
 
-    img#big2 {
+    div#big2 {
         /*grid-column: 5/-1;*/
         grid-column: 4/-1;
     }
